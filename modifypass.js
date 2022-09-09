@@ -8,8 +8,9 @@ const hashPassword = async (pwd) => {
 }
 
 
-const comparePassword = async (pwd,hash) => {
-    let result = await bcryptjs.compare(pwd,hash)
+const comparePassword = async (pwd,dataPass) => {
+    let result = await bcryptjs.compare(pwd,dataPass)
+    console.log("result",result)
     return result
 }
 
